@@ -27,5 +27,5 @@ class CreatedOrderProductView(LoginRequiredMixin, CreateView):
         form.instance.order = order
         form.instance.quantity = 1
         form.save()
-        super().form_valid(form)
+        return super().form_valid(form)
 
