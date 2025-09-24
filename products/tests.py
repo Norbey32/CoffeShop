@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from products.models import Product
 
 class ProductsListViewTests(TestCase):
 
@@ -7,3 +8,16 @@ class ProductsListViewTests(TestCase):
         url = reverse('list_product')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['products'].count(), 0)
+
+    def test_should_return_200_with_products(self)
+        url = reverse('list_product')
+        Product.objects.create(
+            name="Test Product", 
+            description="A product for testing",
+            price=10.0,
+            available=True
+    )
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['products'].count(), 1 )

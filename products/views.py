@@ -16,16 +16,17 @@ class ProductFormView(generic.FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
-        
+
+
 class ProductListView(generic.ListView):
     model = Product
     template_name = "products/list_product.html"
-    context_object_name = 'products'
+    context_object_name = "products"
+
 
 class ProductListAPI(APIView):
     authentication_classes = []
     permission_classes = []
-
 
     def get(self, request):
         products = Product.objects.all()

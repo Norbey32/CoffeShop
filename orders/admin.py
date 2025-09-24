@@ -7,10 +7,10 @@ class OrderProductInLine(admin.TabularInline):
     model = OrderProduct
     extra = 0
 
+
 class OrderAdmin(admin.ModelAdmin):
     model = Order
-    inlines = [
-        OrderProductInLine
-        ]
+    inlines = [OrderProductInLine]
+
 
 admin.site.register(Order, OrderAdmin)
