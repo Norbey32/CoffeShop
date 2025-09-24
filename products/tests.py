@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-class ProductListViewTests(TestCase):
+class ProductsListViewTests(TestCase):
 
     def test_should_return_200(self):
         url = reverse('list_product')
