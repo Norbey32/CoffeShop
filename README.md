@@ -7,7 +7,7 @@ Requirements
 ------------
 
 *   **PostgreSQL** (Make sure it's installed and running)
-*   **Python 3.11**
+*   **Python 3.13.7**
 
 Installation Guide
 ------------------
@@ -19,7 +19,7 @@ Follow these steps to get the project up and running on your local machine.
 Clone the project repository from GitHub to your local machine.
 
 ```bash
-git clone https://github.com/platzi/django.git coffee_shop
+git https://github.com/Norbey32/CoffeShop.git
 cd coffee_shop
 ```
 
@@ -29,8 +29,8 @@ Create and activate a virtual environment.
 
 
 ```bash
-python3.11 -m venv venv 
-source venv/bin/activate 
+python -m venv venv 
+ venv/bin/activate 
 ```
 
 ### 3\. Install Dependencies
